@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  jhipster:
+    image: quay.io/msarti/jhipster-app:latest
+    ports:
+      - "80:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://jhipster-db:5432/jhipster
+      - SPRING_DATASOURCE_USERNAME=jhipster
+      - SPRING_DATASOURCE_PASSWORD=Passw0rd!
+  jhipster-db:
+    image: postgres:13.2
+    environment:
+      - POSTGRES_DB=jhipster
+      - POSTGRES_USERNAME=jhipster
+      - POSTGRES_PASSWORD=Passw0rd!
+    volumes:
+      - /var/dbdata:/var/lib/postgresql/data
+      
+      
