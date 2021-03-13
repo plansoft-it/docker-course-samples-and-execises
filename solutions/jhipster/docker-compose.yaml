@@ -12,9 +12,9 @@ services:
     image: postgres:13.2
     environment:
       - POSTGRES_DB=jhipster
-      - POSTGRES_USERNAME=jhipster
+      - POSTGRES_USER=jhipster
       - POSTGRES_PASSWORD=Passw0rd!
     volumes:
       - /var/dbdata:/var/lib/postgresql/data
-      
+
       
