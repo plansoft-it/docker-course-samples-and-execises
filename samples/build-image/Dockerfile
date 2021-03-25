@@ -1,5 +1,8 @@
-ARG VERSION=3.8-buster
-FROM python:$VERSION
+ARG VERSION=18.04
+FROM ubuntu:${VERSION}
+
+RUN apt update -y && apt install -y python3 && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app
 
