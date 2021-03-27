@@ -2,9 +2,7 @@ ARG VERSION=18.04
 FROM ubuntu:${VERSION}
 
 RUN apt update -y && apt install -y python3 && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN mkdir /app
+    rm -rf /var/lib/apt/lists/* && mkdir /app
 
 COPY main.py /app/
 
